@@ -7,7 +7,8 @@
     "start": "node server.js",
     "start-api": "nodemon server.js",
     "start-client": "parcel src/index.html --open",
-    "test": "jest"
+    "test": "jest && npm run test:lockfile",
+    "test:lockfile": "lockfile-lint -p package-lock.json -t npm -a npm -o https: -c -i"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +33,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
-    "whatwg-fetch": "3.6.2"
+    "whatwg-fetch": "3.6.2",
+    "lockfile-lint": "^4.1.0"
   }
 }
